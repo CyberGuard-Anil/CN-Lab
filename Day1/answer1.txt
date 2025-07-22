@@ -1,0 +1,40 @@
+Lab 1: Week-1: Networking Tools
+
+
+1. What is Networking and its significance in computer networks?
+
+=  Networking is the process of connecting two or more computers/devices together so they can share data, resources, and services. These connections can be wired or wireless and are used in homes, offices, and over the internet.
+
+ Significance of Networking:
+
+1. Resource Sharing: Users can share printers, files, internet connections, etc.
+2. Communication: Allows people to communicate via emails, VoIP, video calls.
+3. Centralized Data Management: Data can be stored and managed from a central server.
+4. Scalability: Easy to add new devices without major changes.
+5. Internet Access: Enables computers to connect to the global internet.
+6. Components required for Data Communication in a Computer Network:
+7. Networking involves both hardware and software components.
+
+Hardware Components:
+
+1. Network Interface Card (NIC)
+= It is a physical device installed in computers to connect them to a network.
+2. Network Cable
+= These are physical cables (like Ethernet cables) used to connect network devices.
+3. RJ-45 Connector
+= It is a standard connector used for Ethernet networking.
+4. Hub
+= A basic device that connects multiple devices in a LAN. It sends data to all connected devices.
+5. Switch
+= More advanced than a hub. It sends data only to the intended device, improving efficiency
+6. Router
+= Connects different networks together, like a home LAN to the internet. It routes traffic based on IP addresses.
+
+Software Components:
+
+1. Protocols (e.g., TCP/IP, HTTP, FTP)
+= Set of rules that define how data is transmitted over the network.
+2. Operating System Network Stack
+= Manages network connections and handles data transmission.
+3.   Firewall & Security Software
+= Monitors and controls incoming and outgoing network traffic based on security rules.

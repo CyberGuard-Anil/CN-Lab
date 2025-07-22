@@ -1,0 +1,47 @@
+2. Discuss different network diagnostic tools
+= Network diagnostic tools are used to test, monitor, and troubleshoot network-related problems. These tools help in identifying connectivity issues, analyzing paths, checking IP addresses, and verifying DNS responses.
+
+a) ping
+1. ping command is used to check whether a host (remote system) is reachable or not.
+2. It sends ICMP Echo Request packets and waits for Echo Reply.
+3. Useful to check basic network connectivity.
+Example:
+ping www.google.com
+
+b) traceroute / tracert
+
+1. traceroute (Linux) or tracert (Windows) shows the path that packets take from your computer to a destination host.
+2. It displays all the routers/hops the packet passes through.
+Example:
+traceroute www.google.com    # Linux  
+tracert www.google.com       # Windows
+
+c) netstat
+
+1. netstat shows active network connections, routing tables, and interface statistics.
+2. Helps in checking open ports and connections.
+Example:
+netstat -a
+
+d) nslookup
+
+1. nslookup is used to query DNS and get IP addresses associated with domain names.
+2. It can also perform reverse lookups.
+Example:
+nslookup www.facebook.com
+
+e) ipconfig / ifconfig
+
+1. ipconfig (Windows) and ifconfig (Linux) show network interface configuration details.
+2. Displays IP address, subnet mask, default gateway, etc.
+Examples:
+ipconfig           # Windows  
+ifconfig           # Linux
+
+f) iptables
+
+1. iptables is a command-line firewall tool in Linux used to define rules for traffic filtering.
+2. Can be used to allow/block specific ports or IPs.
+Examples:
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT   # Allow HTTP  
+sudo iptables -A INPUT -s 192.168.1.100 -j DROP      # Block IP
