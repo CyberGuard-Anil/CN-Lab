@@ -1,0 +1,34 @@
+1. Socket Programming in C (Importance & Fundamentals)
+
+Importance:
+Socket programming networked applications (jaise chat, file transfer, web browsers) banane ke liye use hota hai.
+Sockets computers ke beech data exchange karne ka software interface provide karti hain.
+
+Fundamentals:
+- Socket creation (socket() function)
+- Binding socket to an IP and port (bind())
+- Listening for connections (listen())
+- Accepting connections (accept())
+- Sending & receiving data (send(), recv() ya read(), write())
+- Works on TCP/IP protocols
+
+
+2. Review: Function, Pointer, Structure, Command Line Arguments in C
+
+- Function: Code ka reusable block, e.g. int add(int a, int b);
+- Pointer: Variable that stores address, e.g. int *p;
+- Structure: User-defined data type with multiple variables,
+             e.g. struct student { int roll; char name; };
+- Pointer to Structure: E.g. struct student *ptr;
+- Command Line Arguments: Input from terminal,
+                          written as int main(int argc, char *argv[])
+
+
+3. Little Endian vs. Big Endian (Endianness)
+
+- Little Endian: Least significant byte lowest memory par store hota hai.
+- Big Endian: Most significant byte lowest memory par store hota hai.
+- Significance: Data transfer ke samay different architecture par galat interpretation ho sakta hai,
+                agar byte order ka dhyaan na rakhein.
+                Networking protocols (like TCP/IP) usually use Big Endian order (Network Byte Order).
+
