@@ -18,7 +18,6 @@ int main(int argc, char *argv[]) {
     int sockfd;
     struct sockaddr_in servaddr;
 
-    // Create UDP socket
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd < 0) {
         perror("Socket creation failed");
@@ -34,9 +33,8 @@ int main(int argc, char *argv[]) {
     while (1) {
         printf("Enter message to send: ");
         fgets(buffer, MAXLINE, stdin);
-        buffer[strcspn(buffer, "\n")] = 0; // Remove newline
+        buffer[strcspn(buffer, "\n")] = 0; 
 
-        // Send message
         sendto(sockfd, buffer, strlen(buffer), 0, (struct sockaddr*)&servaddr, sizeof(servaddr));
 
         if (strcmp(buffer, "exit") == 0) {
