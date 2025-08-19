@@ -13,7 +13,6 @@ int main() {
     char msg[MAXLINE];
     struct sockaddr_in servaddr, cliaddr;
 
-    // Step 1: Socket create karo
     if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
         perror("socket creation failed");
         exit(EXIT_FAILURE);
@@ -22,7 +21,6 @@ int main() {
     memset(&servaddr, 0, sizeof(servaddr));
     memset(&cliaddr, 0, sizeof(cliaddr));
 
-    // Step 2: Server address
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = INADDR_ANY;
     servaddr.sin_port = htons(PORT);
@@ -38,13 +36,11 @@ int main() {
 
     socklen_t len = sizeof(cliaddr);
 
-    // First dummy recvfrom -> client ka address lena
     char buffer[MAXLINE];
     int n = recvfrom(sockfd, buffer, MAXLINE, 0, (struct sockaddr *)&cliaddr, &len);
     buffer[n] = '\0';
     printf("Client connected: %s\n", buffer);
 
-    // Now continuous sending
     while (1) {
         printf("Server: ");
         fgets(msg, MAXLINE, stdin);
