@@ -4,7 +4,8 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-int main() {
+int main() 
+{
     int sockfd;
     struct sockaddr_in servaddr;
     socklen_t len;
@@ -12,7 +13,8 @@ int main() {
 
 
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
-    if (sockfd < 0) {
+    if (sockfd < 0) 
+    {
         perror("Socket creation failed");
         exit(1);
     }
